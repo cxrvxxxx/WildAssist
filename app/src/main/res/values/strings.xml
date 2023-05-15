@@ -6,6 +6,6 @@
     <string name="cbTerms_label">I have read and understood the Terms and Conditions.</string>
     <string name="txtName_label">Firstname M.I. Lastname</string>
     <string name="txtEmail_label">example@email.com</string>
-    <string name="txtPassword_label">abcdefghijklmnop</string>
+    <string name="txtPassword_label">Password123</string>
     <string name="btnClear_label">Clear</string>
 </resources>

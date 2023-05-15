@@ -3,6 +3,7 @@ package com.csit28f3.wildassist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,10 +26,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnFocusC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        txtName = (EditText) findViewById(R.id.txtName);
-        txtEmail = (EditText) findViewById(R.id.txtEmail);
-        txtPassword = (EditText) findViewById(R.id.txtPassword);
-        txtConfirmPassword = (EditText) findViewById(R.id.txtConfirmPassword);
+        txtName = (EditText) findViewById(R.id.txtRegName);
+        txtEmail = (EditText) findViewById(R.id.txtRegEmail);
+        txtPassword = (EditText) findViewById(R.id.txtRegPassword);
+        txtConfirmPassword = (EditText) findViewById(R.id.txtRegConfirmPassword);
         cbTerms = (CheckBox) findViewById(R.id.cbTerms);
 
         btnRegisterSubmit = (Button) findViewById(R.id.btnRegisterSubmit);
@@ -51,10 +52,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnFocusC
     public void onFocusChange(View v, boolean hasFocus) {
         if (hasFocus)
             switch (v.getId()) {
-                case R.id.txtName:
-                case R.id.txtEmail:
-                case R.id.txtPassword:
-                case R.id.txtConfirmPassword:
+                case R.id.txtRegName:
+                case R.id.txtRegEmail:
+                case R.id.txtRegPassword:
+                case R.id.txtRegConfirmPassword:
                     ((EditText) v).setText("");
                     break;
             }
@@ -68,8 +69,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnFocusC
                 String name = String.valueOf(txtName.getText());
                 String email = String.valueOf(txtEmail.getText());
                 String password = String.valueOf(txtPassword.getText());
+                String confirmPassword = String.valueOf(txtConfirmPassword.getText());
 
-                if (txtPassword.getText() != txtConfirmPassword.getText()) {
+                if (!password.equals(confirmPassword)) {
                     Toast.makeText(RegisterActivity.this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -82,6 +84,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnFocusC
                 }
 
                 Session.addUser(u);
+
+                Toast.makeText(RegisterActivity.this, "Account created!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btnClear:
                 clearFields();

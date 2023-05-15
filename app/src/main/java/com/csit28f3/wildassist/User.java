@@ -41,8 +41,7 @@ public class User {
         if (o instanceof User) {
             User temp = (User) o;
 
-            if (temp.getName() == this.getName() && temp.getEmail() == this.getEmail())
-                return true;
+            return temp.getName().equals(this.getName()) && temp.getEmail().equals(this.getEmail());
         }
 
         return false;

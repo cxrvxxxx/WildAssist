@@ -37,4 +37,26 @@ public class Session {
     public static User getActiveUser() {
         return activeUser;
     }
+
+    public static boolean isValidCredentials(String email, String password) {
+        boolean flag = false;
+
+        for (User u : users) {
+            if (u.getEmail().equals(email) && u.getPassword().equals(password)) {
+                flag = true;
+                break;
+            }
+        }
+
+        return flag;
+    }
+
+    public static void login(String email, String password) {
+        for (User u : users) {
+            if (u.getEmail().equals(email) && u.getPassword().equals(password)) {
+                setActiveUser(u);
+                break;
+            }
+        }
+    }
 }
