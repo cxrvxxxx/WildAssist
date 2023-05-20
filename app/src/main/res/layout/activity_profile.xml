@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ProfileActivity">
 
     <ImageView
@@ -56,6 +57,7 @@
         android:focusable="false"
         android:inputType="textPersonName"
         android:text="Name"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +88,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -112,6 +115,7 @@
         android:backgroundTint="#800000"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,6 +143,7 @@
         android:backgroundTint="#800000"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -165,6 +170,7 @@
         android:backgroundTint="#800000"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -178,8 +184,10 @@
         android:backgroundTint="#800000"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/btnEditProfileSubmit_label"
+        android:textColor="#FFFFFF"
         android:textSize="11sp"
         app:icon="@drawable/baseline_check_24"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

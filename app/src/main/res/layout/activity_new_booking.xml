@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".NewBookingActivity">
 
     <ScrollView
@@ -43,13 +44,15 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/editTextDate"
+                    android:id="@+id/txtnewBookingDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:backgroundTint="#800000"
                     android:ems="10"
+                    android:enabled="false"
                     android:inputType="date"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -64,10 +67,12 @@
                     android:backgroundTint="#800000"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Set Date"
+                    android:textColor="#FFFFFF"
                     app:icon="@drawable/baseline_calendar_month_24"
+                    app:iconTint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/editTextDate"
+                    app:layout_constraintStart_toEndOf="@+id/txtnewBookingDate"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -87,13 +92,15 @@
                 android:layout_height="match_parent">
 
                 <EditText
-                    android:id="@+id/editTextTime2"
+                    android:id="@+id/txtNewBookingStartTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:backgroundTint="#800000"
                     android:ems="10"
+                    android:enabled="false"
                     android:inputType="time"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -107,10 +114,12 @@
                     android:backgroundTint="#800000"
                     android:fontFamily="@font/roboto_bold"
                     android:text="SET TIME"
+                    android:textColor="#FFFFFF"
                     app:icon="@drawable/baseline_access_time_24"
+                    app:iconTint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/editTextTime2"
+                    app:layout_constraintStart_toEndOf="@+id/txtNewBookingStartTime"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -130,12 +139,15 @@
                 android:layout_height="match_parent">
 
                 <EditText
-                    android:id="@+id/editTextTime3"
+                    android:id="@+id/txtNewBookingEndTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
+                    android:backgroundTint="#800000"
                     android:ems="10"
+                    android:enabled="false"
                     android:inputType="time"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -149,10 +161,12 @@
                     android:backgroundTint="#800000"
                     android:fontFamily="@font/roboto_bold"
                     android:text="SET TIME"
+                    android:textColor="#FFFFFF"
                     app:icon="@drawable/baseline_access_time_24"
+                    app:iconTint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/editTextTime3"
+                    app:layout_constraintStart_toEndOf="@+id/txtNewBookingEndTime"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -177,7 +191,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
+                    android:backgroundTint="#800000"
                     android:hint="Enter destination"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -206,9 +222,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
+                    android:backgroundTint="#800000"
                     android:ems="10"
                     android:hint="Enter reason"
                     android:inputType="textPersonName"
+                    android:textColor="#000000"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"

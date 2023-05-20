@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -67,6 +68,7 @@
         android:backgroundTint="#800000"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/btnRegister_label"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />

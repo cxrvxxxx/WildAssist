@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Session {
     private static ArrayList<User> users = new ArrayList<User>();
     private static User activeUser = null;
+    private static ArrayList<Booking> bookings = new ArrayList<Booking>();
 
     public static boolean hasUsers() {
         if (users.size() == 0)
@@ -58,5 +59,10 @@ public class Session {
                 break;
             }
         }
+    }
+
+    public static void addBooking(Object b) {
+        if (b instanceof Booking)
+            bookings.add((Booking) b);
     }
 }
