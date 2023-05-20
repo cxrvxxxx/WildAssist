@@ -2,15 +2,16 @@
     <!-- Base application theme. -->
     <style name="Theme.WildAssist" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#14213D</item>
-        <item name="colorPrimaryVariant">#14213D</item>
-        <item name="colorOnPrimary">#E5E5E5</item>
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorPrimaryVariant">@color/gold</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#FCA311</item>
-        <item name="colorSecondaryVariant">#FEE311</item>
-        <item name="colorOnSecondary">#E5E5E5</item>
+        <item name="colorSecondary">@color/maroon</item>
+        <item name="colorSecondaryVariant">@color/maroon</item>
+        <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/black</item>
     </style>
 </resources>
