@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDatePickerStyle" parent="android:Widget.Material.Light.DatePicker">
+        <!-- Background color -->
+        <item name="android:background">@color/white</item> <!-- Change your_background_color to the desired background color -->
+
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/white</item> <!-- Change your_text_color to the desired text color -->
+
+        <!-- Highlight color -->
+        <item name="android:colorAccent">@color/gold</item> <!-- Change your_highlight_color to the desired highlight color -->
+
+        <!-- Main color -->
+        <item name="android:headerBackground">@color/gold</item> <!-- Change your_main_color to the desired main color -->
+    </style>
+    <style name="CustomTimePickerStyle" parent="android:Widget.Material.Light.TimePicker">
+        <!-- Background color -->
+        <item name="android:background">@color/white</item> <!-- Change your_background_color to the desired background color -->
+
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/white</item> <!-- Change your_text_color to the desired text color -->
+
+        <!-- Highlight color -->
+        <item name="android:colorAccent">@color/gold</item> <!-- Change your_highlight_color to the desired highlight color -->
+
+        <!-- Main color -->
+        <item name="android:headerBackground">@color/gold</item> <!-- Change your_main_color to the desired main color -->
+    </style>
+</resources>

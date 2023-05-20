@@ -11,8 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView lblSessionUser;
-    private Button btnEditProfile;
     private Button btnNewBooking;
 
     @Override
@@ -20,9 +18,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        lblSessionUser = findViewById(R.id.lblSessionUser);
+        TextView lblSessionUser = findViewById(R.id.lblSessionUser);
 
-        btnEditProfile = findViewById(R.id.btnEditProfile);
+        Button btnEditProfile = findViewById(R.id.btnEditProfile);
         btnNewBooking = findViewById(R.id.btnNewBooking);
 
         lblSessionUser.setText(Session.getActiveUser().getName());

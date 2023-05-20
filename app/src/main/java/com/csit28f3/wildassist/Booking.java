@@ -3,7 +3,7 @@ package com.csit28f3.wildassist;
 import java.text.SimpleDateFormat;
 
 public class Booking {
-    private SimpleDateFormat date;
+    private String date;
     private String startTime;
     private String endTime;
     private String destination;
@@ -11,7 +11,7 @@ public class Booking {
 
     public Booking() {}
 
-    public Booking(SimpleDateFormat date, String startTime, String endTime, String destination, String purpose) {
+    public Booking(String date, String startTime, String endTime, String destination, String purpose) {
         this.date = date;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -19,11 +19,11 @@ public class Booking {
         this.purpose = purpose;
     }
 
-    public SimpleDateFormat getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(SimpleDateFormat date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

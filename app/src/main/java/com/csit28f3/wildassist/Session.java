@@ -3,9 +3,9 @@ package com.csit28f3.wildassist;
 import java.util.ArrayList;
 
 public class Session {
-    private static ArrayList<User> users = new ArrayList<User>();
+    private static final ArrayList<User> users = new ArrayList<User>();
     private static User activeUser = null;
-    private static ArrayList<Booking> bookings = new ArrayList<Booking>();
+    private static final ArrayList<Booking> bookings = new ArrayList<Booking>();
 
     public static boolean hasUsers() {
         if (users.size() == 0)
@@ -61,8 +61,14 @@ public class Session {
         }
     }
 
-    public static void addBooking(Object b) {
-        if (b instanceof Booking)
-            bookings.add((Booking) b);
+    public static void addBooking(Booking b) {
+        bookings.add(b);
+    }
+
+    public static Booking getRecentBooking() {
+        if (bookings.size() > 0)
+            return bookings.remove(bookings.size() - 1);
+
+        return new Booking();
     }
 }

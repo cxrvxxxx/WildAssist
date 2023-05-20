@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/txtnewBookingDate"
+                    android:id="@+id/txtNewBookingDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -58,7 +58,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:id="@+id/btnDatePicker"
+                    android:id="@+id/btnSetBookingDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -72,7 +72,7 @@
                     app:iconTint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/txtnewBookingDate"
+                    app:layout_constraintStart_toEndOf="@+id/txtNewBookingDate"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -106,7 +106,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:id="@+id/btnSetStarttime"
+                    android:id="@+id/btnSetBookingStartTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -153,7 +153,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:id="@+id/btnSetEndTime"
+                    android:id="@+id/btnSetBookingEndTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -239,7 +239,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/btnNewBookingSubmit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="120dp"
