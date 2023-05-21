@@ -1,32 +1,58 @@
 package com.csit28f3.wildassist;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnNewBooking;
+    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        // Fragment manager
+        fragmentManager = getSupportFragmentManager();
+
         TextView lblSessionUser = findViewById(R.id.lblSessionUser);
-
-        Button btnEditProfile = findViewById(R.id.btnEditProfile);
-        btnNewBooking = findViewById(R.id.btnNewBooking);
-
         lblSessionUser.setText(Session.getActiveUser().getName());
 
+        Button btnEditProfile = findViewById(R.id.btnEditProfile);
         btnEditProfile.setOnClickListener(DashboardActivity.this);
-        btnNewBooking.setOnClickListener(DashboardActivity.this);
+
+        Button btnStartFocusMode = findViewById(R.id.btnStartFocusMode);
+        btnStartFocusMode.setOnClickListener(DashboardActivity.this);
+
+        initializeContent();
+    }
+
+    private void initializeContent() {
+        // Default fragment if no bookings are present
+        if (Session.getAllBookings().size() == 0) {
+            BookingFragment bookingFragment = new BookingFragment();
+            fragmentManager.beginTransaction()
+                    .add(R.id.fragmentContainerLayout, bookingFragment)
+                    .commit();
+        } else {
+            ShowBookingsFragment showBookingsFragment = new ShowBookingsFragment();
+            fragmentManager.beginTransaction()
+                    .add(R.id.fragmentContainerLayout, showBookingsFragment)
+                    .commit();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initializeContent();
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -37,9 +63,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 Intent profileIntent = new Intent(DashboardActivity.this, ProfileActivity.class);
                 startActivity(profileIntent);
                 break;
-            case R.id.btnNewBooking:
-                Intent bookingIntent = new Intent(DashboardActivity.this, NewBookingActivity.class);
-                startActivity(bookingIntent);
+            case R.id.btnStartFocusMode:
+                break;
         }
     }
 }

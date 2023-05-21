@@ -1,7 +1,5 @@
 package com.csit28f3.wildassist;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,14 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BookingFragment#newInstance} factory method to
+ * Use the {@link ShowBookingsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BookingFragment extends Fragment implements View.OnClickListener {
+public class ShowBookingsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +24,7 @@ public class BookingFragment extends Fragment implements View.OnClickListener {
     private String mParam1;
     private String mParam2;
 
-    public BookingFragment() {
+    public ShowBookingsFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +34,11 @@ public class BookingFragment extends Fragment implements View.OnClickListener {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BookingFragment.
+     * @return A new instance of fragment ShowBookingsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BookingFragment newInstance(String param1, String param2) {
-        BookingFragment fragment = new BookingFragment();
+    public static ShowBookingsFragment newInstance(String param1, String param2) {
+        ShowBookingsFragment fragment = new ShowBookingsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,22 +59,6 @@ public class BookingFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_booking, container, false);
-
-        Button btnNewBooking = view.findViewById(R.id.btnNewBooking);
-        btnNewBooking.setOnClickListener(BookingFragment.this);
-
-        return view;
-    }
-
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnNewBooking:
-                Intent bookingIntent = new Intent(this.getActivity(), NewBookingActivity.class);
-                startActivity(bookingIntent);
-                break;
-        }
+        return inflater.inflate(R.layout.fragment_show_bookings, container, false);
     }
 }

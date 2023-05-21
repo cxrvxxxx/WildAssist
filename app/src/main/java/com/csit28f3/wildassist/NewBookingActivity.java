@@ -129,6 +129,8 @@ public class NewBookingActivity extends AppCompatActivity implements View.OnClic
                 Session.addBooking(
                         new Booking(date, startTime, endTime, destination, purpose)
                 );
+
+                finish();
                 break;
             case R.id.btnSetBookingDateSubmit:
                 datePickerWindow.dismiss();
