@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookingFragment"/>
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".BookingFragment">
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="No active booking. Click the button below to add one"
+        android:textColor="#808080" />
+
+    <Button
+        android:id="@+id/btnNewBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#800000"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/btnNewBooking_label"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        app:icon="@drawable/baseline_add_24"
+        app:iconTint="#FFFFFF" />
+</LinearLayout>

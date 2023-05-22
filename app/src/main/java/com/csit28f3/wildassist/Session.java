@@ -71,4 +71,8 @@ public class Session {
 
         return new Booking();
     }
+
+    public static ArrayList<Booking> getAllBookings() {
+        return bookings;
+    }
 }
