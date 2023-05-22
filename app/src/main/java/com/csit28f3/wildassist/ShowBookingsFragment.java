@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,16 @@ public class ShowBookingsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_show_bookings, container, false);
+        View v = inflater.inflate(R.layout.fragment_show_bookings, container, false);
+
+        Booking b = Session.getRecentBooking();
+
+        ((TextView) v.findViewById(R.id.txtBookingDate)).setText(b.getDate());
+        ((TextView) v.findViewById(R.id.txtBookingStartTime)).setText(b.getStartTime());
+        ((TextView) v.findViewById(R.id.txtBookingEndTime)).setText(b.getEndTime());
+        ((TextView) v.findViewById(R.id.txtBookingDestination)).setText(b.getDestination());
+        ((TextView) v.findViewById(R.id.txtBookingPurpose)).setText(b.getPurpose());
+
+        return v;
     }
 }
