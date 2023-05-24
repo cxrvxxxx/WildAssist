@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "WildAssist"
 include ':app'
+include ':acad'
