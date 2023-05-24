@@ -64,6 +64,8 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 startActivity(profileIntent);
                 break;
             case R.id.btnStartFocusMode:
+                Intent focusIntent = new Intent(DashboardActivity.this, com.example.acadzone.SplashScreen.class);
+                startActivity(focusIntent);
                 break;
         }
     }
